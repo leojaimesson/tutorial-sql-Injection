@@ -18,7 +18,7 @@
 - [Prática Injeção SQL Manual](#)
 - [Prática Ferramenta SQLMAP](#)
 
-## Leia-me ;)
+## Leia-me
 
 Como previsto na **Lei 12.737/2012 no Art. 154-A**.  Invadir dispositivo informático alheio, conectado ou não à rede de computadores, mediante violação indevida de mecanismo de segurança e com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do titular do dispositivo ou instalar vulnerabilidades para obter vantagem ilícita, resultará em **Pena – detenção, de 3 (três) meses a 1 (um) ano, e multa**.
 
