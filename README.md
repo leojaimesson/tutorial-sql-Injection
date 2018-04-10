@@ -15,8 +15,7 @@
 - [Injeção SQL](#injeção-sql)
 - [Ferramentas](#ferramentas)
 - [Configuração de Ambiente](#configuração-de-ambiente)
-- [Prática Injeção SQL Manual](#)
-- [Prática Ferramenta SQLMAP](#)
+- [Práticas](#práticas)
 
 ## Leia-me
 
@@ -54,3 +53,8 @@ wget https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/1.2 -O sqlmap-1.2.t
 ```console
 tar -vzxf sqlmap-1.2.tar.gz
 ```
+
+## Práticas
+Para obter o passo a passo click em um dos links a seguir:
+- [Injeção Manual](#)
+- [Ferramenta SQLmap](https://raw.githubusercontent.com/leojaimesson/tutorial-sql-injection/master/pdf/Tutorial%20SQL%20Injection%20Com%20SQLMAP.pdf)
