@@ -10,22 +10,23 @@
 
 ## Sumário
 
-- [Objetivos](#objetivos)
-- [Importante](#importante)
+- [Leia-me](#leia-me)
+- [Objetivo](#objetivo)
 - [Injeção SQL](#injeção-sql)
 - [Ferramentas](#ferramentas)
 - [Configuração de Ambiente](#configuração-de-ambiente)
+- [Prática Injeção SQL Manual](#)
+- [Prática Ferramenta SQLMAP](#)
 
-## Objetivos
+## Leia-me ;)
+
+Como previsto na **Lei 12.737/2012 no Art. 154-A**.  Invadir dispositivo informático alheio, conectado ou não à rede de computadores, mediante violação indevida de mecanismo de segurança e com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do titular do dispositivo ou instalar vulnerabilidades para obter vantagem ilícita, resultará em **Pena – detenção, de 3 (três) meses a 1 (um) ano, e multa**.
+
+Lei Nº 12.737, de 30 de novembro de 2012.
+
+## Objetivo
 
 O objetivo deste laboratório será o de explorar e apresentar processos de detecção e exploração de falhas de injeção SQL.
-
-## Importante
-
-Como previsto na **Lei 12.737/2012 no Art. 154-A**.  Invadir dispositivo informático alheio, conectado ou não à rede de computadores, mediante violação indevida de mecanismo de segurança e com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do titular do dispositivo ou instalar vulnerabilidades para obter vantagem ilícita, resultará:
-
-**Pena – detenção, de 3 (três) meses a 1 (um) ano, e multa**.
-Lei Nº 12.737, de 30 de novembro de 2012.
 
 ## Injeção SQL
 
@@ -33,8 +34,23 @@ Lei Nº 12.737, de 30 de novembro de 2012.
 
 ## Ferramentas
 
+**Ferramentas que serão utilizadas**:
+
 [Vulnweb](http://testphp.vulnweb.com/) é uma aplicação web deliberadamente inseguro disponibilizado pela *Acunetix* que permite que desenvolvedores e estudantes interessados testem vulnerabilidades normalmente encontradas em aplicações baseados na linguagem de programação PHP que usam componentes de código comuns e populares. 
 
-<!-- Devido a isso ele será utilizado neste laboratório como objeto de estudo para a prática de *pentest*.  -->
+[SQLmap](http://sqlmap.org) é uma ferramenta de teste de penetração de software livre. Essa ferramenta permite automatizar o processo de detecção e exploração de falhas de injeção SQL. Ele vem com um poderoso mecanismo de detecção, diversos recursos para o testador de penetração e uma ampla variedade de opções como impressão digital do banco de dados, busca de dados do banco de dados, acesso ao sistema de arquivos subjacente e a execução de comandos no sistema operacional.
+
 
 ## Configuração de Ambiente
+
+Neste laboratório será necessário a ferramenta *SQLmap* na versão 1.2.
+
+Para baixar e descompactar a ferramenta execute os seguintes comandos:
+
+```console
+    wget https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/1.2 -O sqlmap-1.2.tar.gz
+```
+
+```console
+    tar -vzxf sqlmap-1.2.tar.gz
+```
