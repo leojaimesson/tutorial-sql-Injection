@@ -48,9 +48,9 @@ Neste laboratório será necessário a ferramenta *SQLmap* na versão 1.2.
 Para baixar e descompactar a ferramenta execute os seguintes comandos:
 
 ```console
-    wget https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/1.2 -O sqlmap-1.2.tar.gz
+wget https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/1.2 -O sqlmap-1.2.tar.gz
 ```
 
 ```console
-    tar -vzxf sqlmap-1.2.tar.gz
+tar -vzxf sqlmap-1.2.tar.gz
 ```
