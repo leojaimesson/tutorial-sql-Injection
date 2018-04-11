@@ -12,6 +12,7 @@
 
 - [Leia-me](#leia-me)
 - [Objetivo](#objetivo)
+- [Linguagem de Consulta Estruturada](#linguagem-de-consulta-estruturada)
 - [Injeção SQL](#injeção-sql)
 - [Ferramentas](#ferramentas)
 - [Configuração de Ambiente](#configuração-de-ambiente)
@@ -27,9 +28,37 @@ Lei Nº 12.737, de 30 de novembro de 2012.
 
 O objetivo deste laboratório será o de explorar e apresentar processos de detecção e exploração de falhas de injeção SQL.
 
+## Linguagem de Consulta Estruturada
+
+Linguagem de Consulta Estruturada ou SQL, é uma linguagem de pesquisa declarativa padrão de gerenciamento de dados que interage com os principais bancos de dados baseados no modelo relacional.
+
+**Exemplos**:
+
+SQL que retorna todos os elementos da tabela usuários:
+
+```sql
+SELECT * FROM usuarios;
+```
+
+SQL que retorna um usuário desde que seu login e sua senha sejam iguais aos campos passados:
+
+```sql
+SELECT * FROM usuarios WHERE login = 'campo_login' AND senha = 'campo_senha';
+```
 ## Injeção SQL
 
 **Injeção SQL trata-se de uma técnica para realizar ataques por meio de manipulação de código SQL**. O ataque ocorre quando o atacante consegue inserir uma série de instruções SQL dentro de uma consulta (*query*) através da manipulação das entradas de dados de uma aplicação.
+
+**Exemplo**:
+
+O atacante injeta os comandos sql no sistema alvo: 
+![exemplo de injecao sql](img/exemplo_injecao_sql.png)
+O resultado será que a consulta irá ficar da seguinte maneira:
+
+```sql
+SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
+```
+
 
 ## Ferramentas
 
