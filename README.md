@@ -52,7 +52,9 @@ SELECT * FROM usuarios WHERE login = 'campo_login' AND senha = 'campo_senha';
 **Exemplo**:
 
 O atacante injeta os comandos sql no sistema alvo: 
+
 ![exemplo de injecao sql](img/exemplo_injecao_sql.png)
+
 O resultado será que a consulta irá ficar da seguinte maneira:
 
 ```sql
