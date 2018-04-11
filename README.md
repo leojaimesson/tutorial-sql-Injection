@@ -34,16 +34,16 @@ Linguagem de Consulta Estruturada ou SQL, é uma linguagem de pesquisa declarati
 
 **Exemplos**:
 
-SQL que retorna todos os elementos da tabela usuários:
+O seguinte código sql retorna todos os elementos da tabela usuários.
 
 ```sql
 SELECT * FROM usuarios;
 ```
 
-SQL que retorna um usuário desde que seu login e sua senha sejam iguais aos campos passados:
+O seguinte código sql retorna um usuário desde que seu login e sua senha sejam iguais aos campos passados como parâmetro.
 
 ```sql
-SELECT * FROM usuarios WHERE login = 'campo_login' AND senha = 'campo_senha';
+SELECT * FROM Users WHERE Name = 'campo_nome' AND Pass = 'campo_senha';
 ```
 ## Injeção SQL
 
@@ -51,11 +51,11 @@ SELECT * FROM usuarios WHERE login = 'campo_login' AND senha = 'campo_senha';
 
 **Exemplo**:
 
-O atacante injeta os comandos sql no sistema alvo: 
+O atacante injeta os comandos sql no sistema alvo.
 
 ![exemplo de injecao sql](img/exemplo_injecao_sql.png)
 
-O resultado será que a consulta irá ficar da seguinte maneira:
+O resultado será que a consulta irá ficar da seguinte maneira.
 
 ```sql
 SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""="";
@@ -75,11 +75,20 @@ SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""="";
 
 Neste laboratório será necessário a ferramenta *SQLmap* na versão 1.2.
 
-Para baixar e descompactar a ferramenta execute os seguintes comandos:
+Para baixar a ferramenta basta executar um dos seguintes comandos no seu terminal. Você pode instalar através da linha de comando com curl ou wget.
+
+**via curl**
+```console
+curl https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/1.2 --output sqlmap-1.2.tar.gz
+```
+
+**via wget**
 
 ```console
 wget https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/1.2 -O sqlmap-1.2.tar.gz
 ```
+
+Para descompactar a ferramenta basta executar o seguinte comando no seu terminal.
 
 ```console
 tar -vzxf sqlmap-1.2.tar.gz
