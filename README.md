@@ -58,7 +58,7 @@ O atacante injeta os comandos sql no sistema alvo:
 O resultado será que a consulta irá ficar da seguinte maneira:
 
 ```sql
-SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
+SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""="";
 ```
 
 
