@@ -33,7 +33,8 @@ Lei Nº 12.737, de 30 de novembro de 2012.
 
 Linguagem de Consulta Estruturada ou SQL, é uma linguagem de pesquisa declarativa padrão de gerenciamento de dados que interage com os principais bancos de dados baseados no modelo relacional.
 
-Os comandos SQL são agrupados em cinco categorias. 
+Os comandos SQL são agrupados em cinco categorias. Estes comandos são os principais usados no gerenciamento, manutenção e consulta de um banco de dados relacional.
+. 
 
 - **DDL** - Linguagem de Definição de Dados.
     - *CREATE* - criar banco de dados, tabelas, colunas.
@@ -42,10 +43,9 @@ Os comandos SQL são agrupados em cinco categorias.
     - *TRUNCATE* - remover todos os registros de uma tabela. Limpa a tabela por completo. Semelhante ao parâmetro Purge de remoção de programas no Linux.
     - *COMMENT* - adicionar comentários ao dicionário de dados.
     - *RENAME* - para renomear um objeto.
-- **DQL** - Linguagem de Consulta de Dados.
-    - *SELECT* - recuperar dados do banco de dados.
 - **DML** - Linguagem de Manipulação de Dados.
     - *INSERT* - inserir dados em uma tabela.
+    - *SELECT* - recuperar dados do banco de dados.
     - *UPDATE* - atualiza os dados existentes em uma tabela.
     - *DELETE* - exclui registros de uma tabela.
     - *CALL* - chamar um subprograma PL / SQL.
@@ -71,11 +71,6 @@ CREATE TABLE Users (
 );
 ```
 
-DQL
-```sql
-SELECT * FROM Users WHERE Name = 'campo_nome' AND Pass = 'campo_senha';
-```
-
 DML
 ```sql
 INSERT INTO Users (Name, Pass) VALUES ('Leo Jaimesson', '@#$%&*uF(2015.1')
@@ -88,10 +83,7 @@ GRANT ALL ON *.* TO 'leojaimesson'@'localhost';
 
 DTL
 ```sql
-START TRANSACTION;
-SELECT @A:=SUM(salary) FROM table1 WHERE type=1;
-UPDATE table2 SET summary=@A WHERE type=1;
-COMMIT;
+SAVEPOINT savepoint_name;
 ```
 
 ## Injeção SQL
