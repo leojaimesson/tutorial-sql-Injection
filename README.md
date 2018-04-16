@@ -33,7 +33,7 @@ Lei Nº 12.737, de 30 de novembro de 2012.
 
 Linguagem de Consulta Estruturada ou SQL, é uma linguagem de pesquisa declarativa padrão de gerenciamento de dados que interage com os principais bancos de dados baseados no modelo relacional.
 
-Os comandos SQL são agrupados em cinco categorias. Estes comandos são os principais usados no gerenciamento, manutenção e consulta de um banco de dados relacional.
+Os comandos SQL são agrupados em quatro categorias. Estes comandos são os principais usados no gerenciamento, manutenção e consulta de um banco de dados relacional.
 . 
 
 - **DDL** - Linguagem de Definição de Dados.
