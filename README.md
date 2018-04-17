@@ -16,7 +16,7 @@
 - [Injeção SQL](#injeção-sql)
 - [Ferramentas](#ferramentas)
 - [Configuração de Ambiente](#configuração-de-ambiente)
-- [Práticas](#práticas)
+- [Prática](#prática)
 
 ## Leia-me
 
@@ -37,7 +37,7 @@ Linguagem de Consulta Estruturada ou SQL, é uma linguagem de pesquisa declarati
 O seguinte código sql retorna todos os elementos da tabela usuários.
 
 ```sql
-SELECT * FROM usuarios;
+SELECT * FROM Users;
 ```
 
 O seguinte código sql retorna um usuário desde que seu login e sua senha sejam iguais aos campos passados como parâmetro.
@@ -94,7 +94,6 @@ Para descompactar a ferramenta basta executar o seguinte comando no seu terminal
 tar -vzxf sqlmap-1.2.tar.gz
 ```
 
-## Práticas
+## Prática
 Para obter o passo a passo click em um dos links a seguir:
-- [Injeção Manual](#)
 - [Ferramenta SQLmap](https://raw.githubusercontent.com/leojaimesson/tutorial-sql-injection/master/pdf/Tutorial%20SQL%20Injection%20Com%20SQLMAP.pdf)
