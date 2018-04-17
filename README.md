@@ -146,4 +146,5 @@ tar -vzxf sqlmap-1.2.tar.gz
 
 ## Prática
 Para obter o passo a passo click em um dos links a seguir:
+- [Injeção manual](https://raw.githubusercontent.com/leojaimesson/tutorial-sql-injection/master/pdf/Tutorial%20SQL%20Manual.pdf)
 - [Ferramenta SQLmap](https://raw.githubusercontent.com/leojaimesson/tutorial-sql-injection/master/pdf/Tutorial%20SQL%20Injection%20Com%20SQLMAP.pdf)
