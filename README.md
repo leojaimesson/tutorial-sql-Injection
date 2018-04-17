@@ -11,7 +11,7 @@
 ## Sumário
 
 - [Leia-me](#leia-me)
-- [Objetivo](#objetivo)
+- [Objetivos](#objetivos)
 - [Linguagem de Consulta Estruturada](#linguagem-de-consulta-estruturada)
 - [Injeção SQL](#injeção-sql)
 - [Ferramentas](#ferramentas)
@@ -24,30 +24,80 @@ Como previsto na **Lei 12.737/2012 no Art. 154-A**.  Invadir dispositivo inform�
 
 Lei Nº 12.737, de 30 de novembro de 2012.
 
-## Objetivo
-
-O objetivo deste laboratório será o de explorar e apresentar processos de detecção e exploração de falhas de injeção SQL.
+## Objetivos
+- Aprender sobre injeção SQL.
+- Obter noção básica sobre o uso da ferramenta SQLmap.
+- Apresentar processos de detecção e exploração de falhas de injeção SQL.
 
 ## Linguagem de Consulta Estruturada
 
 Linguagem de Consulta Estruturada ou SQL, é uma linguagem de pesquisa declarativa padrão de gerenciamento de dados que interage com os principais bancos de dados baseados no modelo relacional.
 
+Os comandos SQL são agrupados em quatro categorias. Estes comandos são os principais usados no gerenciamento, manutenção e consulta de um banco de dados relacional.
+. 
+
+- **DDL** - Linguagem de Definição de Dados.
+    - *CREATE* - criar banco de dados, tabelas, colunas.
+    - *DROP* - remover um objeto no banco de dados.
+    - *ALTER* - altera a estrutura da base de dados.
+    - *TRUNCATE* - remover todos os registros de uma tabela. Limpa a tabela por completo. Semelhante ao parâmetro Purge de remoção de programas no Linux.
+    - *COMMENT* - adicionar comentários ao dicionário de dados.
+    - *RENAME* - para renomear um objeto.
+- **DML** - Linguagem de Manipulação de Dados.
+    - *INSERT* - inserir dados em uma tabela.
+    - *SELECT* - recuperar dados do banco de dados.
+    - *UPDATE* - atualiza os dados existentes em uma tabela.
+    - *DELETE* - exclui registros de uma tabela.
+    - *CALL* - chamar um subprograma PL / SQL.
+    - *EXPLAIN PLAN* - explicar o caminho de acesso aos dados.
+    - *LOCK TABLE* - controle de concorrência.
+- **DCL** - Linguagem de Controle de Dados
+    - *GRANT* - atribui privilégios de acesso do usuário a objetos do banco de dados.
+    - *REVOKE* - remove os privilégios de acesso aos objetos obtidos com o comando *GRANT*.
+- **DTL** ou **TCL** - Linguagem de Transação de Dados
+    - *COMMIT* - salvar o trabalho feito.
+    - *SAVEPOINT* - identificar um ponto em uma transação para que mais tarde você pode efetuar um *ROLLBACK*.
+    - *ROLLBACK* - restaurar banco de dados ao original desde o último *COMMIT*.
+
+
 **Exemplos**:
 
-O seguinte código sql retorna todos os elementos da tabela usuários.
-
+DDL
 ```sql
-SELECT * FROM Users;
+CREATE TABLE Users (
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(50) NOT NULL,
+    Pass VARCHAR(75) NOT NULL
+);
 ```
 
-O seguinte código sql retorna um usuário desde que seu login e sua senha sejam iguais aos campos passados como parâmetro.
-
+DML
 ```sql
-SELECT * FROM Users WHERE Name = 'campo_nome' AND Pass = 'campo_senha';
+INSERT INTO Users (Name, Pass) VALUES ('Leo Jaimesson', '@#$%&*uF(2015.1')
 ```
+
+DCL
+```sql
+GRANT ALL ON *.* TO 'leojaimesson'@'localhost';
+```
+
+DTL
+```sql
+SAVEPOINT savepoint_name;
+```
+
 ## Injeção SQL
 
 **Injeção SQL trata-se de uma técnica para realizar ataques por meio de manipulação de código SQL**. O ataque ocorre quando o atacante consegue inserir uma série de instruções SQL dentro de uma consulta (*query*) através da manipulação das entradas de dados de uma aplicação.
+
+Uma exploração de injeção de SQL bem-sucedida pode:
+- Ler e modificar dados confidenciais do banco de dados.
+- Executar operações de administração no banco de dados.
+    - Auditoria de desligamento ou o [DBMS](http://knoow.net/ciencinformtelec/informatica/database-management-systems-dbms/).
+    - Truncar tabelas e logs.
+    - Adicionar usuários.
+- Recuperar o conteúdo de um determinado arquivo presente no sistema de arquivos do DBMS.
+- Emitir comandos para o sistema operacional.
 
 **Exemplo**:
 
